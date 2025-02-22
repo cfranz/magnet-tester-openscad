@@ -59,17 +59,11 @@ if(generate=="base" || generate=="all") {
                     text( str(magnet_diameter, "x", magnet_height), size = font_size, halign = "center", valign = "center", font=font_family );
     }
 
-    // "N" on cover layers
-    color("white")
-        translate([0,-1,base_height+base_cover_height-font_height+0.0001])
-        linear_extrude(font_height)
-            text( "N", size = font_size-1, halign = "center", valign = "top", font=font_family );
-
     // number of cover layers
     color("white")
-        translate([0,1,base_height+base_cover_height-font_height+0.0001])
+        translate([0,0,base_height+base_cover_height-font_height+0.0001])
         linear_extrude(font_height)
-            text( str(cover), size = font_size-1, halign = "center", valign = "bottom", font=font_family );
+            text( str(cover), size = font_size-1, halign = "center", valign = "center", font=font_family );
 
 }
 
@@ -81,17 +75,11 @@ if(generate=="text" || generate=="all") {
             translate([0,0,base_height])
                 cylinder(h = base_cover_height, r = (magnet_diameter + base_diameter_add)/2 );
 
-    // "N" on cover layers
-    color("white")
-        translate([0,-1,base_height+base_cover_height-font_height+0.0001])
-        linear_extrude(font_height+1)
-            text( "N", size = font_size-1, halign = "center", valign = "top", font=font_family );
-
     // number of cover layers
     color("white")
-        translate([0,1,base_height+base_cover_height-font_height+0.0001])
+        translate([0,0,base_height+base_cover_height-font_height+0.0001])
         linear_extrude(font_height+1)
-            text( str(cover), size = font_size-1, halign = "center", valign = "bottom", font=font_family );
+            text( str(cover), size = font_size-1, halign = "center", valign = "center", font=font_family );
 
     }
 
