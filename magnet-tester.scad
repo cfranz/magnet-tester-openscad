@@ -63,7 +63,7 @@ if(generate=="base" || generate=="all") {
     color("white")
         translate([0,0,base_height+base_cover_height-font_height+0.0001])
         linear_extrude(font_height)
-            text( str(cover), size = font_size-1, halign = "center", valign = "center", font=font_family );
+            text( str(cover), size = font_size+1, halign = "center", valign = "center", font=font_family );
 
 }
 
@@ -79,7 +79,7 @@ if(generate=="text" || generate=="all") {
     color("white")
         translate([0,0,base_height+base_cover_height-font_height+0.0001])
         linear_extrude(font_height+1)
-            text( str(cover), size = font_size-1, halign = "center", valign = "center", font=font_family );
+            text( str(cover), size = font_size+1, halign = "center", valign = "center", font=font_family );
 
     }
 
